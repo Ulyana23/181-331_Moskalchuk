@@ -12,8 +12,8 @@
 
 
 Я решила исправить 2 из них:
-1. main.py:47:0: C0103: Function name "errorMessageN" doesn't conform to snake_case naming style (invalid-name)
-2. main.py:80:14: R1734: Consider using [] instead of list() (use-list-literal)
+1. ```main.py:47:0: C0103: Function name "errorMessageN" doesn't conform to snake_case naming style (invalid-name)```
+2. ```main.py:80:14: R1734: Consider using [] instead of list() (use-list-literal)```
 
 Первая ошибка говорит о том, что функция errorMessageN должна быть переминована в соответствии со стилем snake_case.
 Код до изменений:
