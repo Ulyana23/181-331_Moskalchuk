@@ -44,7 +44,7 @@ def errorMessage(p_q):
         sys.exit()
 
 
-def errorMessageN(_maxElem, _n):
+def error_message_n(_maxElem, _n):  # ЭКЗАМЕН замена errorMessageN на error_message_n
     if _n < _maxElem:
         print("Вы выбрали слишком маленькие значения P и Q, попробуйте ещё раз.")
         sys.exit()
@@ -77,19 +77,11 @@ def keyGenerate(_p, _q):
 
 
 def textToNum(_string):
-    numList = list()
+    numList = []  # ЭКЗАМЕН замена list() на []
     for letter in _string:
         numList.append(ord(letter))
 
     return numList
-
-
-"""def textToNum(_string):
-    numList = list()
-    for letter in _string:
-        numList.append(alphabet.index(letter)+1)
-
-    return numList"""
 
 
 def enc(_stringCodeList, _e, _n):
@@ -126,7 +118,7 @@ errorMessage(q)
 
 D, E, N = keyGenerate(p, q)
 
-errorMessageN(max(stringCodeList), N)
+error_message_n(max(stringCodeList), N)
 
 # print("Коды: ", stringCodeList)
 
@@ -135,11 +127,3 @@ print("Текст в зашифрованном виде: ", newString)
 
 newString = dec(newString, N, D)
 print("Текст в расшифрованном виде: ", newString)
-
-
-
-
-
-
-
-
