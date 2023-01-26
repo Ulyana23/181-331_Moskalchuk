@@ -17,7 +17,7 @@
 
 Первая ошибка говорит о том, что функция errorMessageN должна быть переминована в соответствии со стилем snake_case.
 Код до изменений:
-```
+```python
 def errorMessageN(_maxElem, _n):
     if _n < _maxElem:
         print("Вы выбрали слишком маленькие значения P и Q, попробуйте ещё раз.")
@@ -26,7 +26,7 @@ def errorMessageN(_maxElem, _n):
 
 После изменений:
 
-```
+```python
 def error_message_n(_maxElem, _n):
     if _n < _maxElem:
         print("Вы выбрали слишком маленькие значения P и Q, попробуйте ещё раз.")
@@ -35,7 +35,7 @@ def error_message_n(_maxElem, _n):
 
 Вторая ошибка говорит о том, что для объявления списка вместо конструкции list() лучше использовать [].
 Код до изменений:
-```
+```python
 def textToNum(_string):
     numList = list()  
     for letter in _string:
@@ -44,7 +44,7 @@ def textToNum(_string):
     return numList
 ```
 Код после изменений:
-```
+```python
 def textToNum(_string):
     numList = []
     for letter in _string:
@@ -57,6 +57,23 @@ def textToNum(_string):
 ![image](https://user-images.githubusercontent.com/43664758/214791411-89a715dd-800a-4303-833f-c052d80327d2.png)
 ![image](https://user-images.githubusercontent.com/43664758/214791563-fcfb2eda-a41b-4106-a57d-2bf7ae6daa01.png)
 
+
+# Модульное тестирование
+
+Представленный модуль был реализован в рамках дисциплины «Программирование криптографических алгоритмов». Для проведения модульного тестирования была выбрана функция Эйлера.
+
+Для написания юниттеста был создан файл ```test.py```
+Далее был импортирован фреймворк для модульного тестирования и файл main.py.
+
+В классе MyTestCase и функции test_something подаю входное значение в функцию euler() и результат записываю в переменную result. 
+Далее вызывается функция, срвнивающая значение, которое вернула функция euler() с верным выходным значением.
+
+### Результат:
+Позитивный модульный тест:
+![image](https://user-images.githubusercontent.com/43664758/214800439-c8047791-6196-4aa8-a4bd-ed252c889e11.png)
+
+Негативный модульный тест:
+![image](https://user-images.githubusercontent.com/43664758/214800844-00d319aa-dcdf-4cf4-b413-676e976ebbe3.png)
 
 
 
